@@ -6,6 +6,7 @@ export const getAllFeature = async (req, res) => {
     res.json(features);
   } catch (err) {
     console.log("ERROR! to get all features,", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };
 
@@ -18,6 +19,7 @@ export const createFeature = async (req, res) => {
     res.status(201).json(f);
   } catch (err) {
     console.log("ERROR! to create feature,", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };
 
@@ -29,6 +31,7 @@ export const updateFeature = async (req, res) => {
     res.json(f);
   } catch (err) {
     console.log("ERROR! to update feature,", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };
 
@@ -40,5 +43,6 @@ export const deleteFeature = async (req, res) => {
     res.json({ message: "Deleted" });
   } catch (err) {
     console.log("ERROR! to delete feature,", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };

@@ -7,6 +7,7 @@ export const getAllTesti = async (req, res) => {
     res.json(testimonials);
   } catch (err) {
     console.log("ERROR! to get Tesimonials: ", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };
 
@@ -18,6 +19,7 @@ export const createTesti = async (req, res) => {
     res.status(201).json(t);
   } catch (err) {
     console.log("ERROR! to create Tesimonial: ", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };
 
@@ -29,5 +31,6 @@ export const deleteTesti = async (req, res) => {
     res.json({ message: "Deleted" });
   } catch (err) {
     console.log("ERROR! to delete Tesimonial: ", err.message);
+    res.status(500).json({ message: "Server Error!" });
   }
 };
