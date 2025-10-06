@@ -1,0 +1,62 @@
+# Node.js dependencies
+node_modules/
+
+# Build and Output Folders
+dist/
+build/
+coverage/
+tmp/
+.cache/
+
+# Logs and Debug Files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / Editor Settings
+.vscode/
+.idea/
+*.swp
+
+# OS-specific Files
+.DS_Store
+Thumbs.db
+
+# PIDs and Runtime Data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Misc Temporary Files
+*.tmp
+*.bak
+*.old
+
+# Frontend Specific
+# React/Vite cache
+node_modules/.vite/
+vite.config.ts.timestamp*
+
+# Tailwind JIT cache
+*.tailwindcss.tmp
+
+# eslint / prettier cache
+.eslintcache
+.prettiercache
+
+# Backend Specific
+# MongoDB dump or backup
+dump/
+data/
+uploads/
