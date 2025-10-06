@@ -1,29 +1,20 @@
 import nodemailer from "nodemailer";
 
-export const createTransporter = (config) => {
-  const transporter = nodemailer.createTransport({
-    host: config.MAIL_HOST,
-    port: Number(config.MAIL_PORT) || 587,
-    secure: false,
-    auth: {
-      user: config.MAIL_USER,
-      pass: config.MAIL_PASS,
-    },
-  });
+// Create a transporter
+export const transporter = nodemailer.createTransport({
+  host: process.env.MAIL_HOST,
+  port: Number(process.env.MAIL_PORT),
+  secure: false, 
+  auth: {
+    user: process.env.MAIL_USER, 
+    pass: process.env.MAIL_PASS, 
+  },
+});
 
-  return transporter;
-};
-
-export const sendContactMail = async ({
-  transporter,
-  to,
-  from,
-  subject,
-  text,
-  html,
-}) => {
+// Function to send mail
+export const sendMail = async ({ to, subject, text, html }) => {
   const mailOptions = {
-    from,
+    from: `"IELTS Institute" <${process.env.MAIL_USER}>`,
     to,
     subject,
     text,

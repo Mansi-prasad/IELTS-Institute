@@ -3,7 +3,6 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 import connectDB from "./src/config/db.js";
-
 // routes
 import authRoutes from "./src/routes/auth.routes.js";
 import testimonialRoutes from "./src/routes/testimonials.routes.js";
@@ -15,7 +14,7 @@ const app = express();
 connectDB();
 
 // middlewares
-app.use(express.json({ limit: "5mb" }));
+app.use(express.json());
 app.use(cors());
 
 // api routes
