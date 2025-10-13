@@ -10,11 +10,6 @@ A full-stack React and Node.js application for a fictional IELTS Institute. This
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Folder Structure](#folder-structure)
-- [Environment Variables](#environment-variables)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Author](#author)
 
 ---
 
@@ -82,5 +77,6 @@ npm run dev
 
 # open in browser
 http://localhost:5173/
+
 
 ```
